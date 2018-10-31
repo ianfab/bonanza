@@ -32,7 +32,7 @@ icc:
 	$(MAKE) CC=icc CFLAGS='-w2 $(OPT) -std=gnu99 -O2 -ipo' LDFLAG1='-static -ipo -pthread' bonanza
 
 bonanza : $(OBJS)
-	$(CC) $(LDFLAG1) -o bonanza $(OBJS) $(LDFLAG2)
+	$(CC) -o bonanza $(OBJS) $(LDFLAG1) $(LDFLAG2)
 
 $(OBJS) : shogi.h param.h
 
